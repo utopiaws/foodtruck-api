@@ -20,8 +20,7 @@ foodtruck-api gets source data via Socrata Open Data API.
 
 The api can be split into two functions: <br />
   1. get nearby trucks for one user <br />
-   you must set the user's latitude and longitude. You can also set one parameter called "keyword"(personalized search), and the api can
-   return the results including the keyword. There are other parameters you can set, they are:<br />
+   you must set the user's latitude and longitude. You can also set one parameter called "keyword"(to search the food you want), and the api will return the results including the keyword. There are other parameters you can set, they are:<br />
    limit (default: 10): the number of return results <br />
    range (default: 1000): the range of distance near the user<br />
    example 1:<br />
@@ -32,6 +31,8 @@ The api can be split into two functions: <br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&limit=20 <br />
    exampel 4: <br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&range=100<br />
+   
+   For the keyword search part, as the limit of the time, I just simply use the API to return the results and do the words match. In the production, a better solution is to build the invert-index for all the food truck to make the search much faster.
    
    All the return results from path nearByFoodTruck satisfy that the status of truck is "APPROVED" and expirationdate        is larger than the request date.
   2. search by location/address/objectid/object <br />
