@@ -7,6 +7,11 @@ foodtruck-api gets source data via Socrata Open Data API.
 ## Requirements
   Install sbt, java
   
+## Code structure
+  Core code:
+   app/controllers : write the code to take actions when new api requests come. 
+   app/filters: include access loggers and error handle filters
+   
 ## Start Up API server
 
  in repo root directory, command: ./activator run      
