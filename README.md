@@ -5,7 +5,7 @@ This foodtruck-api is used to get nearby food trucks or search exact trucks usin
 foodtruck-api gets source data via Socrata Open Data API.
 
 ## Requirements
-  Install sbt, java
+  make sure sbt, java installed, the sbt version is set in project/build.properties and project/plugins.sbt
   
 ## Code structure
   Core code:
