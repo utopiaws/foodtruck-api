@@ -23,13 +23,17 @@ The api can be split into two functions: <br />
    you must set the user's latitude and longitude. You can also set one parameter called "keyword"(to search the food you want), and the api will return the results including the keyword. There are other parameters you can set, they are:<br />
    limit (default: 10): the number of return results <br />
    range (default: 1000): the range of distance near the user<br />
-   example 1 (return nearyByFoodtruck given user's latitude and longitude):<br />
+
+   -example 1 (return nearyByFoodtruck given user's latitude and longitude):<br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594 <br />
-   example 2 (return nearByFoodtruck given users's latitude, longitude and keyword): <br />
+   
+   -example 2 (return nearByFoodtruck given users's latitude, longitude and keyword): <br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&keyword=chicken <br />
-   example 3 (return nearByFoodtruck given users's latitude, longitude and set limit number): <br />
+   
+  -example 3 (return nearByFoodtruck given users's latitude, longitude and set limit number): <br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&limit=20 <br />
-   exampel 4 (return nearByFoodtruck given users's latitude, longitude and set range size): <br />
+   
+  -exampel 4 (return nearByFoodtruck given users's latitude, longitude and set range size): <br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&range=100<br />
    
    For the keyword search part, as the limit of the time, I just simply use the API to return the results and do the words match. In the production, a better solution is to build the invert-index for all the food truck to make the search much faster.
