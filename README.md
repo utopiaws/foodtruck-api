@@ -20,7 +20,7 @@ foodtruck-api gets source data via Socrata Open Data API.
 
 The api can be split into two functions: <br />
   1. get nearby trucks for one user <br />
-   you must set the user's latitude and longitude. You can also set one parameter called "keyword", and the api can
+   you must set the user's latitude and longitude. You can also set one parameter called "keyword"(personalized search), and the api can
    return the results including the keyword. There are other parameters you can set, they are:<br />
    limit (default: 10): the number of return results <br />
    range (default: 1000): the range of distance near the user<br />
