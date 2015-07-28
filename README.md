@@ -24,42 +24,16 @@ The api can be split into two functions: <br />
    return the results including the keyword. There are other parameters you can set, they are:<br />
    limit (default: 10): the number of return results <br />
    range (default: 1000): the range of distance near the user<br />
-   example:<br />
+   example 1:<br />
+   http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594 <br />
+   example 2: <br />
    http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&keyword=chicken <br />
+   example 3: <br />
+   http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&limit=20 <br />
+   exampel 4: <br />
+   http://localhost:9000/nearByFoodTruck?latitude=37.7901490874965&longitude=-122.398658184594&range=100<br />
    
-   results:  <br />
-[
-{
-location: {
-needs_recoding: false,
-longitude: "-122.398658184594",
-latitude: "37.7901490874965"
-},
-status: "APPROVED",
-expirationdate: "2016-03-15T00:00:00",
-permit: "15MFF-0073",
-block: "3708",
-received: "Mar 16 2015 12:33PM",
-facilitytype: "Truck",
-blocklot: "3708055",
-locationdescription: "01ST ST: STEVENSON ST to JESSIE ST (21 - 56)",
-cnn: "101000",
-priorpermit: "0",
-approved: "2015-06-19T16:12:38",
-schedule: "http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=15MFF-0073&ExportPDF=1&Filename=15MFF-0073_schedule.pdf",
-address: "50 01ST ST",
-applicant: "Scotch Bonnet",
-lot: "055",
-fooditems: "Jerk chicken: curry chicken: curry goat: curry dhal: Burritos: Fish: Ox tails: rice: beans: veggies.",
-longitude: "-122.398658184604",
-latitude: "37.7901490737255",
-objectid: "632078",
-y: "2115738.283",
-x: "6013063.33"
-}
-]
-   
-   PS: the return results from path nearByFoodTruck satisfy that the status of truck is "APPROVED" and expirationdate        is larger than the request date.
+   All the return results from path nearByFoodTruck satisfy that the status of truck is "APPROVED" and expirationdate        is larger than the request date.
   2. search by location/address/objectid/object <br />
    This function you should input the exact value of the parameter you want to search <br />
    examples:<br />
