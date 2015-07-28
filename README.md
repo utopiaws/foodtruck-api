@@ -9,7 +9,7 @@ foodtruck-api gets source data via Socrata Open Data API.
   
 ## Start Up API server
 
- run ./activator run  in repo root directory
+ run    ./activator run      in repo root directory
 
 ## API Reference
 
